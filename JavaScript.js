@@ -1,6 +1,6 @@
-let sentiment;
+let model;
 
-sentiment = ml5.sentiment('movieReviews', modelReady);
+model = ml5.sentiment('movieReviews', Ready);
     
 function on_key_up() {
     getSentiment();
@@ -11,7 +11,7 @@ function getSentiment() {
   
   var text = document.getElementById("text").value;
 
-  const prediction = sentiment.predict(text);
+  const prediction = model.predict(text);
   if (prediction.score >= 0.9){
     document.getElementById("show").innerHTML = "&#129321";
   }
@@ -44,7 +44,7 @@ function getSentiment() {
 
 }
 
-function modelReady() {
+function Ready() {
   var elem = document.getElementById('wait');
   elem.parentNode.removeChild(elem);
   var newElement = document.createElement("p");

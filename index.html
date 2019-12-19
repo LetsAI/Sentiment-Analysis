@@ -4,9 +4,10 @@
     <style>
     #rotation  {
       animation-name: rotate; 
-      animation-duration: 5s; 
+      animation-duration: 6s; 
       animation-iteration-count: infinite;
       animation-timing-function: linear;
+      
     }
     @keyframes rotate {
       from {transform: rotate(0deg);}
@@ -18,13 +19,13 @@
   </head>
 
   <body>
-    <h1>Sentiment Analysis</h1>
+    <h1>Sentiment Analysis &nbsp;<i id="rotation" class="fa fa-cog" style="color:rgb(0, 121, 168);"></i></h1>
 <div id="show_div">
     <p id="wait">Please wait <i id="rotation" class="fa fa-cog"></i> loading the model...</p>
 </div>
-    <textarea id="text"  cols="40" rows="5" autofocus maxlength="100" 
+    <textarea id="text"  cols="40" rows="5" maxlength="100" 
     style="max-width: 400px; max-height:200px; min-width: 400px; min-height:200px ;"
-    onkeyup="on_key_up()" onclick="document.getElementById('text').innerText =''">Please write something here...</textarea>
+    onkeyup="on_key_up()" onclick="document.getElementById('text').innerText =''"> Please write something here...</textarea>
 <div id="newdiv">
     <p>Score: <span id="score">None</span></p>
     <span id="show" style="font-size: 100px;margin-left: 99px;"></span>
