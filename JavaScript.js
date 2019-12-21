@@ -40,7 +40,7 @@ function getSentiment() {
     document.getElementById("show").innerHTML = "&#128169";
   }
 
-  document.getElementById("score").innerHTML = (`${(prediction.score*100).toFixed(0)} %`);
+  document.getElementById("score").innerHTML = (`${(prediction.score*10).toFixed(1)}/10`);
 
 }
 
