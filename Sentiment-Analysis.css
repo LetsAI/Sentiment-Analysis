@@ -1,0 +1,11 @@
+#text{
+   font-size:18px;
+
+}
+
+
+@media screen and (max-width:260mm){
+    #text{zoom:200%;border:2px solid royalblue}
+    #score{font-size: 68px !important}
+    #show{font-size: 100px !important}
+}

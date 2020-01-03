@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="Sentiment-Analysis.css">
     <style>
     #rotation  {
       animation-name: rotate; 
@@ -19,7 +20,10 @@
   </head>
 
   <body>
-    <h1>Sentiment Analysis &nbsp;<i id="rotation" class="fa fa-cog" style="color:rgb(0, 121, 168);"></i></h1>
+    <h1>Sentiment Analysis &nbsp;<i id="rotation" class="fa fa-cog" style="color:rgb(0, 121, 168);"></i></h1><br>
+    <p>This example uses ML5 model trained on movie reviews. This model scores the sentiment of text with a value between 0 
+      ("negative") and 10 ("positive"). The movie reviews were truncated to a maximum of 200 words and only
+      the 20,000 most common words in the reviews are used.</p><br>
 <div id="show_div">
     <p id="wait">Please wait <i id="rotation" class="fa fa-cog"></i> loading the model...</p>
 </div>
@@ -27,10 +31,11 @@
     style="max-width: 400px; max-height:200px; min-width: 400px; min-height:200px ;"
     onkeyup="on_key_up()" onclick="document.getElementById('text').innerText =''"> Please write something here...</textarea>
 <div id="newdiv">
-    <p>Score: <span id="score">None</span></p>
-    <span id="show" style="font-size: 100px;margin-left: 99px;"></span>
+    <p style="font-size: 50px;">Score: <span id="score" style="font-size: 50px;">None </span>
+      <span id="show" style="font-size: 50px;margin-left: 99px;"></span></p>
+    
 
 </div>
-    <script src="JavaScript.js"></script>
+    <script src="Sentiment-Analysis.js"></script>
   </body>
 </html>
